@@ -1,0 +1,23 @@
+{
+    "name": "daniel/app-task",
+    "autoload-dev": {
+        "psr-4": {
+            "Module\\" : "./modules",
+            "Router\\" : "./",
+            "Controllers\\" : "./controllers",
+            "Classes\\" : "./classes"
+        }
+    },
+    "authors": [
+        {
+            "name": "bordon1995",
+            "email": "bordon1995@gmail.com"
+        }
+    ],
+    "require": {
+        "rbdwllr/reallysimplejwt": "^5.0",
+        "firebase/php-jwt": "^6.10",
+        "vlucas/phpdotenv": "^5.6",
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
