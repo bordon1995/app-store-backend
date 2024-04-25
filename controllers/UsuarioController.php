@@ -67,7 +67,7 @@ class UsuarioController
 
     public static function prueba()
     {
-        send_json('preuva pasada', 200);
+        send_json('preuva pasada RECONTRA PASADA', 200);
     }
 
     public static function login()
