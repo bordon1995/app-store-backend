@@ -6,7 +6,7 @@ use Module\Usuario;
 
 class Router
 {
-    public $privateRout = ['/api/home', '/api/perfil', '/api/pedido/agregar', '/api/pedido', '/api/editar/pedido', '/api/eliminar/pedido', '/api/cliente', 'api/prueva'];
+    public $privateRout = ['/api/home', '/api/perfil', '/api/pedido/agregar', '/api/pedido', '/api/editar/pedido', '/api/eliminar/pedido', '/api/cliente'];
     public $routerGET = array();
     public $routerPOST = array();
 

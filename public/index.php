@@ -8,30 +8,16 @@ use Controllers\UsuarioController;
 use Controllers\ProductoController;
 use Controllers\PedidosController;
 
-// $uri = $_ENV['ALLOW_ORIGIN'];
-
-header('Access-Control-Allow-Origin: *');
-header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method");
-header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
-header("Allow: GET, POST, OPTIONS, PUT, DELETE");
-$method = $_SERVER['REQUEST_METHOD'];
-if ($method == "OPTIONS") {
-    die();
-}
-
-
-// header("Access-Control-Allow-Origin:" . $uri);
-// header('Access-Control-Allow-Headers:Origin,X-Requested-With,Content-Type,Authorization,Accept');
-// header('Access-Control-Allow-Methods:GET,POST,PUT,DELETE,OPTIONS');
-// header('content-type: application/json');
+header("Access-Control-Allow-Origin:*");
+header('Access-Control-Allow-Headers:Origin,X-Requested-With,Content-Type,Authorization,Accept');
+header('Access-Control-Allow-Methods:GET,POST,PUT,DELETE,OPTIONS');
+header('content-type: application/json');
 
 
 $router = new Router();
 //RUTAS-PUBLICAS
-
 //login
 $router->post('/api', [UsuarioController::class, 'login']);
-$router->get('/api', [UsuarioController::class, 'prueba']);
 //registro
 $router->post('/api/registro', [UsuarioController::class, 'registro']);
 //confirmar-cuenta
