@@ -5,7 +5,7 @@ namespace Module;
 class Producto extends ActiveRecord
 {
     protected static $tablaName = 'producto';
-    protected static $tablaDB = ['id', 'nombre', 'precio', 'imagen', 'cantidad', 'disponibilidad', 'usuario_id'];
+    protected static $tablaDB = ['id', 'nombre', 'precio', 'imagen', 'cantidad', 'disponibilidad'];
 
     public $id;
     public $nombre;
@@ -13,7 +13,6 @@ class Producto extends ActiveRecord
     public $imagen;
     public $disponibilidad;
     public $descripcion;
-    public $usuario_id;
 
     public function __construct($args = [])
     {
@@ -23,6 +22,5 @@ class Producto extends ActiveRecord
         $this->imagen = $args['imagen'] ?? '';
         $this->disponibilidad = $args['disponibilidad'] ?? 0;
         $this->descripcion = $args['descripcion'] ?? '';
-        $this->usuario_id = $args['usuario_id'] ?? '';
     }
 }
