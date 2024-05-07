@@ -17,7 +17,7 @@ function gmail($usuario, $asunto)
         $email = $_ENV['EMAIL_USER'];
 
         $mail->Username = $email;
-        $mail->Password = "rjmt tcig uuuh svdq";
+        $mail->Password = "bdng tcol bxvr nxgn";
 
         $mail->setFrom($email, 'Zuni-Store');
         $mail->addAddress($usuario->correo, $usuario->nombre);

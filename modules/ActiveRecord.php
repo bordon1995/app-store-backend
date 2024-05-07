@@ -78,13 +78,12 @@ abstract class ActiveRecord
         $query .= join("','", array_values($array));
         $query .= "' ) ;";
 
-        try {
-            $respuesta = self::$conectionDB->query($query);
-            if ($respuesta) {
-                return true;
-            }
-        } catch (\Throwable $th) {
-            self::$validacion['mensaje'] = $th;
+
+        $respuesta = self::$conectionDB->query($query);
+        if ($respuesta) {
+            return true;
+        } else {
+            return false;
         }
     }
 

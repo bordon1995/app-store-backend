@@ -39,6 +39,7 @@ class UsuarioController
 
                 send_json('Usuario registrado Correctamente', 200);
             } catch (\Throwable $th) {
+                debuger($th);
                 send_json($th, 430);
             }
         };
